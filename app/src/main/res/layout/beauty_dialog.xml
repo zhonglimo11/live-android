@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        app:behavior_peekHeight="240dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/round_box_66000000"
+            android:thumb="@drawable/thumb"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/effect_btn"-->
+<!--                android:layout_width="44dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:contentDescription="@string/app_name"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@mipmap/bt_camera_texiao_nor"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent" />-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/style_btn"-->
+<!--                android:layout_width="44dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_marginEnd="94dp"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:contentDescription="@string/app_name"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@mipmap/bt_camera_style_filter"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent" />-->
+
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/beauty_btn"-->
+<!--                android:layout_width="44dp"-->
+<!--                android:layout_height="44dp"-->
+<!--                android:layout_marginEnd="25dp"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:background="?android:attr/selectableItemBackground"-->
+<!--                android:contentDescription="@string/app_name"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@mipmap/bt_camera_face_texiao_nor"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent" />-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

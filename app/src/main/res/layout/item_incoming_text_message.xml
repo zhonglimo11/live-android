@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@id/messageUserAvatar"
+        android:textColor="@color/fontColor_2"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/messageUserAvatar"
+        android:background="@drawable/shape_incoming_message"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fontDefaultColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageText"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            app:layout_alignSelf="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

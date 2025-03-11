@@ -1,27 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.douyin">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
+        android:name=".LiveApplication"
         android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/header_icon_1"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/networksecurityconfig"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/header_icon_1"
         android:supportsRtl="true"
-        android:resizeableActivity="true"
-        android:theme="@style/main_theme">
+        android:theme="@style/main_theme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
         <!-- android 全面屏 -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".core.activitys.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.zaaach.citypicker.CityPickerActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/CityPicker.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            tools:ignore="DiscouragedApi" />
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
     </application>
 
 </manifest>

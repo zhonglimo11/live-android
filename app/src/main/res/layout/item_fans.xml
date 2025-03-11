@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp20">
+
+    <RelativeLayout
+        android:id="@+id/item_left"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:id="@+id/iv_icon_container"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/header_icon_3" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/iv_icon_container"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小猫爱在奶糖星"
+                android:textColor="@color/fontDefaultColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="开始关注了你 03-26"
+                android:textColor="@color/fontColor_2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/follow_back"
+            android:layout_width="71dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_elliptic_red"
+            android:gravity="center"
+            android:text="回关"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/chat"
+            android:layout_width="71dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_elliptic_gray"
+            android:gravity="center"
+            android:text="去私信"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

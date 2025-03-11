@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@id/messageUserAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"/>
+
+    <RelativeLayout
+        android:id="@id/bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/messageUserAvatar"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/shape_outcoming_message">
+
+        <TextView
+            android:id="@id/messageText"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true" />
+
+        <TextView
+            android:id="@id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageText"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            app:layout_alignSelf="center"
+            app:layout_order="1" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

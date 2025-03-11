@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="12dp"
+        android:src="@mipmap/header_icon_3" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="53dp"
+        android:layout_toStartOf="@id/videoImage"
+        android:layout_toEndOf="@id/userAvatar">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxWidth="132dp"
+            android:maxLines="1"
+            android:text="小猫爱在奶糖星球大战"
+            android:textColor="@color/fontDefaultColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="38dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@id/userName"
+            android:background="@drawable/bg_author"
+            android:gravity="center"
+            android:text="作者"
+            android:textColor="@color/fontColor_2"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/userInteractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="赞了你的评论 03-19"
+            android:textColor="@color/fontColor_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userInteractions"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="强烈安利！！！"
+            android:textColor="@color/fontDefaultColor"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="2dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/comments"
+            android:layout_marginTop="5dp"
+            android:background="@color/menuSelect_two"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fromComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comments"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3.5dp"
+            android:layout_toEndOf="@id/line"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="请问是利川的吗"
+            android:textColor="@color/fontColor_2"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/videoImage"
+        android:layout_width="56dp"
+        android:layout_height="66dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_empty" />
+
+</RelativeLayout>

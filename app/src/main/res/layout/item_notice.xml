@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_notice"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/noticeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="2020年05月12日 16:45:05"
+        android:textColor="@color/fontColor_2"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/noticeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noticeTime"
+        android:layout_marginTop="8dp"
+        android:text="恭喜您有新的下级 快乐的小王 加入"
+        android:textColor="@color/fontDefaultColor"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/noticeText"
+        android:layout_marginTop="12dp"
+        android:background="@color/menuSelect_two" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginTop="10dp"
+        android:text="查看详情"
+        android:textColor="@color/fontDefaultColor"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/check"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/details"
+        android:src="@drawable/icon_check" />
+</RelativeLayout>

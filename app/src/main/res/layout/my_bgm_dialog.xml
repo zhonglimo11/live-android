@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/round_top_12dp_white_bg">
+
+    <FrameLayout
+        android:id="@+id/layout_commentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs1"
+            app:tabGravity="center"
+            android:layout_above="@+id/start_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            app:tabIndicatorColor="@color/tabSelect"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabMaxWidth="200dp"
+            app:tabMinWidth="100dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/tabSelect"
+            app:tabTextColor="@color/black" >
+            <com.google.android.material.tabs.TabItem
+                android:text="推荐"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.tabs.TabItem
+                android:text="收藏"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.google.android.material.tabs.TabItem
+                android:text="用过"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.tabs.TabLayout>
+        <View
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:background="@color/line"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="@drawable/text_shape_gray"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="更多音乐"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="110dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp500"
+                android:paddingBottom="@dimen/dp48"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="66dp"
+                app:layout_behavior="@string/bottom_sheet_behavior" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>
